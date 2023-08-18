@@ -9,10 +9,12 @@ form {
 
 .titulo {
   text-align: center;
+  font-family:'orbitron';
 }
 
 
 .pokimoni-card {
+  font-family:'orbitron';
   position: relative;
   height: fit-content;
   max-width: 450px;
@@ -22,7 +24,7 @@ form {
   padding: 15px;
   margin: 0 auto;
   background-color: white;
-  border: 5px solid black;
+  border: 2px solid black;
 }
 
 .pokimoni-card::before {
@@ -40,9 +42,9 @@ form {
 }
 
 .img-container {
-  position: relative;
-  width: 180px;
-  margin: 10px auto;
+  position:static;
+  width: 200px;
+  margin: 5px auto;
 }
 
 .poke-stats div {
@@ -54,13 +56,22 @@ form {
 }
 
 .poke-types div {
-  padding: 5px;
-  margin: 5px;
+  position: relative;
+  padding: 2px;
+  margin: auto;
   border-radius: 4px;
-  border: 1px dashed black;
+  border: 1px solid black;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+   
+
 }
 
 .pokimoni-img {
-  width: 180px;
-  border-radius: 50%;
+  width: 200px;
+  border-radius: 10%;
 }

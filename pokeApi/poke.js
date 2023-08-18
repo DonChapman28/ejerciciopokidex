@@ -8,6 +8,7 @@ const pokeStats = document.querySelector('[data-stats]');
 
 const typeColors = {
     electric: '#FFEA70',
+    fairy: '#FFC6D9',
     normal: '#f8efe7',
     fire: '#FF675C',
     water: '#0596C7',
@@ -15,16 +16,16 @@ const typeColors = {
     rock: '#999799',
     flying: '#d6e7e7',
     grass: '#4A9681',
-    psychic: '#FFC6D9',
+    psychic: '#ff70a4',
     ghost: '#68639d',
     bug: '#A2FAA3',
     poison: '#795663',
     ground: '#D2B074',
-    dragon: '#DA627D',
+    dragon: '#15349a',
     steel: '#1D8A99',
-    fighting: '#2F2F2F',
-    dark: '#2a2c4d',
-    default: '#2A1A1F'
+    fighting: '#d38d2f',
+    dark: '#2A1A1F',
+    default: '#2a2c4d'
 };
 
 const buscarPokimoni = event => {
@@ -61,12 +62,18 @@ const renderPokemonTypes = types => {
     pokeTypes.innerHTML = '';
     types.forEach(type => {
         const typeTextElement = document.createElement("div");
-        typeTextElement.style.color = typeColors[type.type.name];
+        // typeTextElement.style.color = typeColors[type.type.name];
+        typeTextElement.style.backgroundColor = typeColors[type.type.name];
         typeTextElement.textContent = type.type.name;
+
+       
+        
+        if (["ghost", "poison", "dark","dragon", "default"].includes(type.type.name)) {
+            typeTextElement.style.color = "white";
+        }
+
         pokeTypes.appendChild(typeTextElement);
-
     });
-
 }
 
 const renderPokemonStats = stats => {
@@ -81,14 +88,12 @@ const renderPokemonStats = stats => {
         statElement.appendChild(statElementAmount);
         pokeStats.appendChild(statElement);
     })
-
-
 }
 
 const renderNotFound = () => {
     pokeName.textContent = 'No encontrado';
     pokeImg.setAttribute('src', 'poke-shadow.png');
-    pokeImg.style.background =  '#fff';
+    pokeImg.style.background = '#fff';
     pokeTypes.innerHTML = '';
     pokeStats.innerHTML = '';
     pokeId.textContent = '';
