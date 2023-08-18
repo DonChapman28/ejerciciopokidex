@@ -1,5 +1,20 @@
 body {
-    background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    340deg,
+    hsl(240deg 65% 60%) 0%,
+    hsl(261deg 59% 63%) 8%,
+    hsl(277deg 52% 67%) 17%,
+    hsl(293deg 45% 72%) 26%,
+    hsl(239deg 71% 82%) 34%,
+    hsl(210deg 89% 77%) 43%,
+    hsl(197deg 79% 73%) 52%,
+    hsl(206deg 88% 72%) 60%,
+    hsl(220deg 83% 74%) 69%,
+    hsl(255deg 61% 73%) 77%,
+    hsl(264deg 79% 73%) 85%,
+    hsl(273deg 91% 72%) 93%,
+    hsl(283deg 98% 68%) 100%
+  );
   }
 
 form {
@@ -10,7 +25,16 @@ form {
 .titulo {
   text-align: center;
   font-family:'orbitron';
+  font-size:xx-large;
+
 }
+
+.titulo a {
+  color: inherit; /* Heredar el color del texto circundante */
+  text-decoration: none; /* Quitar subrayado */
+}
+
+
 
 
 .pokimoni-card {
@@ -23,7 +47,7 @@ form {
   text-align: center;
   padding: 15px;
   margin: 0 auto;
-  background-color: white;
+  background: linear-gradient(155deg, rgba(226,237,181,0.9976190305223652) 0%, rgba(102,162,215,1) 76%);
   border: 2px solid black;
 }
 
