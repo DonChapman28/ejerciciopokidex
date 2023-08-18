@@ -10,22 +10,22 @@ const typeColors = {
     electric: '#FFEA70',
     fairy: '#FFC6D9',
     normal: '#f8efe7',
-    fire: '#FF675C',
+    fire: '#ff5222',
     water: '#0596C7',
     ice: '#8cfff7',
     rock: '#999799',
     flying: '#d6e7e7',
-    grass: '#4A9681',
+    grass: '#72c84c',
     psychic: '#ff70a4',
     ghost: '#68639d',
-    bug: '#A2FAA3',
+    bug: '#c1ff67',
     poison: '#795663',
     ground: '#D2B074',
     dragon: '#15349a',
     steel: '#1D8A99',
     fighting: '#d38d2f',
     dark: '#2A1A1F',
-    default: '#2a2c4d'
+    default: '#000000'
 };
 
 const buscarPokimoni = event => {
@@ -53,8 +53,10 @@ const renderPokimoniData = data => {
 const setCardColor = types => {
     const colorOne = typeColors[types[0].type.name];
     const colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
-    pokeImg.style.background = `conic-gradient(${colorTwo} 0deg 45deg, ${colorOne} 0deg 45deg)`;
-    pokeImg.style.backgroundSize = '5px 5px';
+    // pokeImg.style.background = `conic-gradient(${colorTwo} 0deg 45deg, ${colorOne} 0deg 45deg)`;
+    pokeImg.style.background = `linear-gradient(135deg, ${colorTwo} 0%, ${colorOne} 100%)`;
+    
+    pokeImg.style.backgroundSize = '100%';
     
 }
 

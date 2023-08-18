@@ -56,11 +56,13 @@ form {
   margin: 0 auto;
   background: linear-gradient(155deg, rgba(226,237,181,0.9976190305223652) 0%, rgba(102,162,215,1) 76%);
   border: 2px solid black;
+  box-shadow: 10px 10px 20px black;
+  
 }
 
 .pokimoni-card::before {
   content: '';
-    background: radial-gradient(black 33%, transparent 33%);
+    background: gradient(black 33%, transparent 33%);
     background-size: 3px 3px;
     border-radius: 4px;
     height: 100%;
@@ -97,6 +99,7 @@ form {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  box-shadow: 0.2em 0.2em 20px rgb(0, 0, 0);
 
    
 
@@ -105,4 +108,5 @@ form {
 .pokimoni-img {
   width: 200px;
   border-radius: 10%;
+  box-shadow: 0.2em 0.2em 20px rgb(0, 0, 0);
 }
