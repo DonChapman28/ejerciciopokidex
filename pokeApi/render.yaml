@@ -7,4 +7,4 @@ buildCommand: ""
 preDeployCommand: ""
 
 # Comando de inicio para servir archivos estáticos con Python
-startCommand: "python -m http.server $PORT"
+startCommand: "python -m http.server $PORT --directory ejerciciosvarios/pokeApi"
